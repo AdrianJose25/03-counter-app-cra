@@ -5,68 +5,41 @@
 
 body {
   padding: 30px;
-  font-size: 19px;
+  font-size: 25px;
 }
 
-.img-product {
-  width: 400px;
-  height: 400px;
+button {
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  margin: 5px;
+  color: rgba(255, 255, 255, 0.795);
+  border: none;
+  transition: transform 0.1s ease;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.star {
-  width: 10%;
+button:active {
+  transform: scale(0.95);
 }
 
-.card-container {
-  margin: 20px;
-}
-
-.card-container-img {
-  position: relative;
-  display: flex;
-  margin: 40px auto 10px 0;
-}
-
-.info-container {
-  position: relative;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.info-container h4,
-h5,
-p {
-  margin: 5px 0 0 0;
-}
-
-.info-container h5 {
-  font-size: 20px;
-  color: rgb(81, 81, 81);
-}
-
-.discount {
-  margin-right: 12px;
-  color: rgb(202, 34, 205);
-}
-
-.new {
-  position: absolute;
+.container {
+  margin-top: 250px;
   display: flex;
   align-items: center;
-  top: -45px;
-  color: rgb(45, 226, 48);
-  font-size: 20px;
+  justify-content: center;
 }
 
-.product-container {
-  display: flex;
-  flex-direction: column;
+.card {
+  justify-items: center;
+  font-size: 50px;
 }
 
-@media (min-width: 768px) {
-  .product-container {
-    display: flex;
-    flex-direction: row;
-  }
+.add {
+  background-color: rgb(119, 239, 119);
+}
+
+.del {
+  background-color: rgb(224, 110, 110);
 }
