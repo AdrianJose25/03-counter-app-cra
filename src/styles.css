@@ -5,45 +5,68 @@
 
 body {
   padding: 30px;
-  font-size: 25px;
+  font-size: 19px;
 }
 
-.circles-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.img-product {
+  width: 400px;
+  height: 400px;
+}
+
+.star {
+  width: 10%;
+}
+
+.card-container {
   margin: 20px;
 }
 
-.circles-container div {
-  margin: 10px;
+.card-container-img {
+  position: relative;
+  display: flex;
+  margin: 40px auto 10px 0;
 }
 
-.item {
-  width: 100px;
-  height: 100px;
-  border: solid 2px rgb(222, 222, 222);
-  border-radius: 50px;
+.info-container {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.item1 {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  border-radius: 50px;
+.info-container h4,
+h5,
+p {
+  margin: 5px 0 0 0;
 }
 
-.item2 {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(0, 255, 42);
-  border-radius: 50px;
+.info-container h5 {
+  font-size: 20px;
+  color: rgb(81, 81, 81);
 }
 
-.item3 {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(0, 242, 255);
-  border-radius: 50px;
+.discount {
+  margin-right: 12px;
+  color: rgb(202, 34, 205);
+}
+
+.new {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: -45px;
+  color: rgb(45, 226, 48);
+  font-size: 20px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .product-container {
+    display: flex;
+    flex-direction: row;
+  }
 }

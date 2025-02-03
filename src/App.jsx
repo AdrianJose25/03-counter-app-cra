@@ -1,34 +1,11 @@
 import React from "react";
-import { Circle } from "./components/Circle";
-//import facts from "./data/facts";
-//import { Item } from "./components/Item";
+import data from "./data/Shoes";
+import { Card } from "./components/Card";
 
 export const App = () => {
-  const showColor = [
-    {
-      id: "a",
-      show: 1,
-      hide: 1,
-    },
-    {
-      id: "b",
-      show: 2,
-      hide: 0,
-    },
-    {
-      id: "c",
-      show: 3,
-      hide: 1,
-    },
-  ];
-
-  const circles = showColor.map((circle) => (
-    <Circle key={circle.id} className="item" {...circle} />
+  const products = data.map((product) => (
+    <Card key={product.id} {...product} />
   ));
 
-  //   const caract = facts.map((fact) => (
-  //     <Item key={fact.id} on={fact.on} id={fact.id} fact={fact.fact} />
-  //   ));
-
-  return <div>{circles}</div>;
+  return <div className="product-container">{products}</div>;
 };
