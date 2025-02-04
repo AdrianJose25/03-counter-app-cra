@@ -7,6 +7,7 @@ body {
   padding: 30px;
   font-size: 25px;
 }
+
 button {
   width: 100px;
   height: 35px;
@@ -41,8 +42,4 @@ button:active {
 
 .del {
   background-color: rgb(224, 110, 110);
-}
-
-.text-del {
-  color: red;
 }
