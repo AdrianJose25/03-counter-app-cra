@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -21,39 +22,47 @@ body {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(208, 208, 208);
 }
+
 .header-container .perfil-img {
   width: 50px;
   height: 50px;
   border-radius: 50px;
   margin: 0 12px 0 7px;
 }
+
 .perfil-name-container {
   margin-right: auto;
 }
+
 .perfil-name-container .perfil-title {
   font-weight: 400;
   font-size: 0.85rem;
 }
+
 .header-container .menu-header {
   width: 27px;
   border-radius: 50px;
   margin: 0 5px 0 9px;
   transform: rotate(90deg);
 }
+
 .header-container h4 {
   margin-right: auto;
   font-size: 0.95rem;
   font-weight: 600;
 }
+
 .main-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
+
 .main-container .main-img {
   width: 60.3935%;
 }
+
 .footer {
   margin: 18px auto;
   width: 60%;
@@ -62,10 +71,20 @@ body {
   justify-content: center;
   font-size: 0.9rem;
 }
+
 .footer-icons {
   margin-bottom: 5px;
   display: flex;
 }
+
+span {
+  transition: transform 0.1s ease;
+}
+
+span:active {
+  transform: scale(0.7);
+}
+
 .corazon {
   background-image: url("../public/images/assets/iconos/corazon.png");
   background-repeat: no-repeat;
@@ -85,14 +104,17 @@ body {
   margin-left: 1px;
   cursor: pointer;
 }
+
 .corazon:hover {
   /* filter: invert(72%) sepia(10%) saturate(291%) hue-rotate(188deg) brightness(95%) contrast(88%);  */
   cursor: pointer;
 }
+
 .corazon_active:hover {
   /* filter: invert(72%) sepia(10%) saturate(291%) hue-rotate(188deg) brightness(95%) contrast(88%); */
   cursor: pointer;
 }
+
 .footer-icons .burbuja {
   background-image: url("../public/images/assets/iconos/burbuja.png");
   background-repeat: no-repeat;
@@ -101,6 +123,7 @@ body {
   background-size: 31px 31px;
   cursor: pointer;
 }
+
 .footer-icons .burbuja:hover {
   filter: invert(72%) sepia(10%) saturate(291%) hue-rotate(188deg)
     brightness(95%) contrast(88%);
@@ -122,6 +145,7 @@ body {
     brightness(95%) contrast(88%);
   cursor: pointer;
 }
+
 .guardar-icon-container {
   display: flex;
   justify-content: flex-start;
@@ -129,6 +153,7 @@ body {
   margin-right: 1px;
   cursor: pointer;
 }
+
 .guardar {
   background-image: url("../public/images/assets/iconos/guardar.png");
   background-repeat: no-repeat;
@@ -137,6 +162,7 @@ body {
   background-size: 22px 22px;
   cursor: pointer;
 }
+
 .guardar_active {
   background-image: url("../public/images/assets/iconos/guardar_active.png");
   background-repeat: no-repeat;
@@ -160,9 +186,11 @@ body {
 .caption {
   display: flex;
 }
+
 .caption span {
   margin-left: 10px;
 }
+
 p {
   animation-duration: 3s;
   animation-name: slidein;
