@@ -1,10 +1,10 @@
 import React from "react";
-import { FormPractice } from "./components/FormPractice";
+import { PracticeReducer } from "./components/PracticeReducer";
 
 export const App = () => {
   return (
     <div>
-      <FormPractice />
+      <PracticeReducer />
     </div>
   );
 };
