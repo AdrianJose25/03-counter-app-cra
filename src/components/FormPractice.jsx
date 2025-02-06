@@ -1,27 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "./useForm";
 
 export const FormPractice = () => {
   const pass = "jsx";
 
-  //form-object
-  const [dataForm, setDataForm] = useState({
+  const initialState = {
     nickName: "",
     password: "",
     accept: false,
     message: "",
     framework: "",
     car: "",
-  });
-
-  //updater-function
-  const handleform = (e) => {
-    const { name, value, type, checked } = e.target;
-    setDataForm((prevState) => ({
-      ...prevState,
-      [name]: type === "checkbox" ? checked : value,
-    }));
   };
-  console.log(dataForm);
+
+  const { dataForm, handleForm, resetDataForm } = useForm(initialState);
 
   //form-submit-function
   const submit = (e) => {
@@ -42,6 +34,7 @@ export const FormPractice = () => {
     }
 
     console.log(dataForm);
+    resetDataForm(initialState);
   };
 
   return (
@@ -51,14 +44,14 @@ export const FormPractice = () => {
         <input
           type="text"
           name="nickName"
-          onChange={handleform}
+          onChange={handleForm}
           placeholder="nickName"
           value={dataForm.nickName}
         />
         <input
           type="text"
           name="password"
-          onChange={handleform}
+          onChange={handleForm}
           placeholder="password"
           value={dataForm.password}
         />
@@ -67,14 +60,14 @@ export const FormPractice = () => {
             type="checkbox"
             name="accept"
             id="accept"
-            onChange={handleform}
+            onChange={handleForm}
             checked={dataForm.accept}
           />
           <label htmlFor="accept">Acepta?</label>
         </div>
         <textarea
           name="message"
-          onChange={handleform}
+          onChange={handleForm}
           placeholder="your message"
           cols="30"
           rows="10"
@@ -85,7 +78,7 @@ export const FormPractice = () => {
           <input
             type="radio"
             name="framework"
-            onChange={handleform}
+            onChange={handleForm}
             id="React"
             value={"React"}
             checked={dataForm.framework === "React"}
@@ -96,14 +89,14 @@ export const FormPractice = () => {
           <input
             type="radio"
             name="framework"
-            onChange={handleform}
+            onChange={handleForm}
             id="Vue"
             value={"Vue"}
             checked={dataForm.framework === "Vue"}
           />
           <label htmlFor="Vue">Vue</label>
         </div>
-        <select name="car" onChange={handleform}>
+        <select name="car" onChange={handleForm}>
           <option value="">-- Choose --</option>
           <option value="Audi">Audi</option>
           <option value="Mercedez">Mercedez</option>

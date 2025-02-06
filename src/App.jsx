@@ -1,10 +1,12 @@
 import React from "react";
-import { FormPractice } from "./components/FormPractice";
+import { LoginForm } from "./components/LoginForm";
+import { RegisterForm } from "./components/RegisterForm";
 
 export const App = () => {
   return (
     <div>
-      <FormPractice />
+      <LoginForm />
+      <RegisterForm />
     </div>
   );
 };
